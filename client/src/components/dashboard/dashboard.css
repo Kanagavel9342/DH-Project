@@ -235,7 +235,7 @@ body {
 
   /* Set fixed width for cards in mobile */
   .card {
-    width: 190px; /* Fixed width */
+    width: 210px; /* Fixed width */
     min-height: 180px;
     padding: 20px;
   }
