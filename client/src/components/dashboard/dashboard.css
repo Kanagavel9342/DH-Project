@@ -9,7 +9,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(135deg, #2c3e50, #3498db);
   background-size: 400% 400%;
   animation: gradientLoop 10s ease infinite;
@@ -28,15 +28,16 @@ body {
   }
 }
 
+/* Dashboard Container */
 .dashboard-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   color: #fff;
-  padding: 20px;
+  padding: 30px; /* Increased from 20px */
   width: 100%;
-  max-width: 1400px; /* Add this */
-  margin: 0 auto;     /* Center horizontally */
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .main-content {
@@ -44,99 +45,68 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  max-width: 1400px; /* Add this */
-  margin: 0 auto;    /* Center horizontally */
+  margin: 0 auto;
+  padding: 0 30px; /* Increased from 20px */
+  box-sizing: border-box;
 }
 
 .content-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
-  padding: 15px 30px;
+  margin-bottom: 40px; /* Increased from 30px */
+  padding: 20px 35px; /* Increased from 15px 30px */
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 100%;
-  flex-wrap: wrap;
+  border-radius: 12px; /* Increased from 10px */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Dashboard Cards Grid */
 .dashboard-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  padding: 20px 0;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px; /* Increased from 25px */
+  padding: 30px 0; /* Increased from 20px */
   width: 100%;
-}
-
-/* Media Queries */
-@media (min-width: 1440px) {
-  .dashboard-cards {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .dashboard-cards {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .dashboard-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 767px) {
-  .dashboard-cards {
-    grid-template-columns: 1fr;
-  }
-
-  .dashboard-container {
-    padding: 10px;
-  }
-
-  .content-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .profile-icon {
-    width: 100%;
-    justify-content: space-between;
-  }
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Card Styles */
 .card {
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  padding: 25px;
+  border-radius: 12px; /* Increased from 10px */
+  padding: 30px; /* Increased from 25px */
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px); /* Slightly increased */
+  border: 1px solid rgba(255, 255, 255, 0.25); /* More visible border */
+  min-height: 220px; /* Increased from 200px */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-6px); /* Increased from 5px */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25); /* Enhanced shadow */
+  background: rgba(255, 255, 255, 0.2); /* More visible hover */
 }
 
 .card.active {
   border: 2px solid var(--card-color);
-  box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.3);
+  box-shadow: 0 0 0 4px rgba(33, 150, 243, 0.4); /* Enhanced glow */
 }
 
 .card-icon {
-  width: 70px;
-  height: 70px;
-  margin: 0 auto 20px;
+  width: 80px; /* Increased from 70px */
+  height: 80px; /* Increased from 70px */
+  margin: 0 auto 25px; /* Increased from 20px */
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -147,22 +117,24 @@ body {
 
 .card h3 {
   margin: 0;
-  font-size: 20px;
+  font-size: 22px; /* Increased from 20px */
   color: white;
+  letter-spacing: 0.5px; /* Added for better readability */
 }
 
 /* Header and Profile Styles */
 .company-header {
   display: flex;
   align-items: baseline;
-  gap: 15px;
+  gap: 20px; /* Increased from 15px */
 }
 
 .company-name,
 .industries-text {
-  font-size: 28px;
+  font-size: 32px; /* Increased from 28px */
   margin: 0;
   font-weight: 700;
+  letter-spacing: 0.5px; /* Added for better readability */
 }
 
 .profile-section {
@@ -172,73 +144,146 @@ body {
 .profile-icon {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px; /* Increased from 10px */
   cursor: pointer;
-  padding: 10px 15px;
-  border-radius: 25px;
-  background: rgba(255, 255, 255, 0.1);
+  padding: 12px 18px; /* Increased from 10px 15px */
+  border-radius: 28px; /* Increased from 25px */
+  background: rgba(255, 255, 255, 0.15); /* Slightly more visible */
   transition: all 0.3s ease;
-  font-size: 16px;
+  font-size: 17px; /* Increased from 16px */
 }
 
 .profile-icon:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.25); /* More visible hover */
 }
 
 .profile-dropdown {
   position: absolute;
   right: 0;
-  top: 100%;
+  top: 110%; /* Increased from 100% */
   background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  padding: 12px;
+  border-radius: 10px; /* Increased from 8px */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  padding: 15px; /* Increased from 12px */
   z-index: 100;
-  min-width: 180px;
+  min-width: 200px; /* Increased from 180px */
 }
 
 .logout-btn {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px; /* Increased from 10px */
   width: 100%;
-  padding: 10px;
+  padding: 12px; /* Increased from 10px */
   background: none;
   border: none;
   color: #333;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 6px; /* Increased from 4px */
   text-align: left;
-  font-size: 15px;
+  font-size: 16px; /* Increased from 15px */
 }
 
-/* Section & Button Utility */
-.section-container {
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+/* Media Queries - Responsive Adjustments */
+@media (max-width: 1200px) {
+  .dashboard-cards {
+    max-width: 1000px;
+    padding: 25px; /* Increased from 20px */
+  }
 }
 
-.back-button {
-  background: #2196F3;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 1rem;
+@media (max-width: 992px) {
+  .dashboard-cards {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 800px;
+    gap: 25px; /* Added consistent gap */
+  }
 }
 
-.back-button:hover {
-  background: #0d8bf2;
+@media (max-width: 768px) {
+  .dashboard-cards {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 650px; /* Increased from 600px */
+    gap: 25px; /* Increased from 20px */
+    padding: 25px 20px; /* Added horizontal padding */
+  }
+  
+  .card {
+    min-height: 200px; /* Increased from 180px */
+    padding: 25px; /* Increased from 20px */
+  }
+  
+  .card-icon {
+    width: 70px; /* Increased from 60px */
+    height: 70px; /* Increased from 60px */
+  }
+  
+  .content-header {
+    padding: 20px 25px; /* Increased from 15px 20px */
+  }
+}
+
+@media (max-width: 576px) {
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+    max-width: 480px; /* Increased from 450px */
+    padding: 25px 20px; /* Increased from 20px 15px */
+    gap: 20px; /* Increased from 15px */
+  }
+  
+  .content-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px; /* Increased from 15px */
+    padding: 20px; /* Increased from 15px 20px */
+    margin-bottom: 30px; /* Reduced from 40px for mobile */
+  }
+  
+  .profile-icon {
+    width: 100%;
+    justify-content: space-between;
+    padding: 12px 20px; /* Increased from 10px 15px */
+  }
+  
+  .company-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px; /* Increased from 5px */
+  }
+  
+  .company-name,
+  .industries-text {
+    font-size: 26px; /* Adjusted from 24px */
+  }
+  
+  .main-content {
+    padding: 0 20px; /* Increased from 15px */
+  }
+  
+  .card {
+    min-height: 180px; /* Increased from 160px */
+    padding: 20px; /* Increased from 15px */
+  }
+  
+  .card-icon {
+    width: 60px; /* Increased from 50px */
+    height: 60px; /* Increased from 50px */
+    margin-bottom: 20px; /* Increased from 15px */
+  }
+  
+  .card h3 {
+    font-size: 20px; /* Increased from 18px */
+  }
 }
 
 /* Nested route outlet container */
-.dashboard-child-content {
-  margin-top: 20px;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 20px;
-  border-radius: 10px;
-  backdrop-filter: blur(4px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.dashboard-container .dashboard-child-content {
+  margin: 30px auto; /* Increased from 20px */
+  background: rgba(255, 255, 255, 0.08); /* Slightly more visible */
+  padding: 25px; /* Increased from 20px */
+  border-radius: 12px; /* Increased from 10px */
+  backdrop-filter: blur(5px); /* Slightly increased */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Enhanced shadow */
+  max-width: 1200px;
+  width: 100%;
 }
