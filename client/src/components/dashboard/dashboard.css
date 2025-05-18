@@ -224,56 +224,59 @@ body {
 }
 
 @media (max-width: 576px) {
+  @media (max-width: 576px) {
   .dashboard-cards {
     grid-template-columns: 1fr;
-    max-width: 480px; /* Increased from 450px */
-    padding: 25px 20px; /* Increased from 20px 15px */
-    gap: 20px; /* Increased from 15px */
+    max-width: 100%; /* Allow full width */
+    padding: 20px 15px;
+    gap: 20px;
+    justify-items: center; /* Center cards horizontally */
   }
-  
+
+  /* Set fixed width for cards in mobile */
+  .card {
+    width: 190px; /* Fixed width */
+    min-height: 180px;
+    padding: 20px;
+  }
+
   .content-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px; /* Increased from 15px */
-    padding: 20px; /* Increased from 15px 20px */
-    margin-bottom: 30px; /* Reduced from 40px for mobile */
+    gap: 15px;
+    padding: 15px 20px;
   }
-  
+
   .profile-icon {
     width: 100%;
     justify-content: space-between;
-    padding: 12px 20px; /* Increased from 10px 15px */
   }
-  
+
   .company-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px; /* Increased from 5px */
+    gap: 5px;
   }
-  
+
   .company-name,
   .industries-text {
-    font-size: 26px; /* Adjusted from 24px */
+    font-size: 24px;
   }
-  
+
   .main-content {
-    padding: 0 20px; /* Increased from 15px */
+    padding: 0 15px;
   }
-  
-  .card {
-    min-height: 180px; /* Increased from 160px */
-    padding: 20px; /* Increased from 15px */
-  }
-  
+
   .card-icon {
-    width: 60px; /* Increased from 50px */
-    height: 60px; /* Increased from 50px */
-    margin-bottom: 20px; /* Increased from 15px */
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
   }
-  
+
   .card h3 {
-    font-size: 20px; /* Increased from 18px */
+    font-size: 18px;
   }
+
 }
 
 /* Nested route outlet container */
