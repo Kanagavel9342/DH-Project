@@ -194,7 +194,7 @@ body {
 
 @media (max-width: 992px) {
   .dashboard-cards {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     max-width: 800px;
     gap: 25px; /* Added consistent gap */
   }
